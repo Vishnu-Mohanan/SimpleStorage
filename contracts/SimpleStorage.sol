@@ -10,4 +10,14 @@ contract SimpleStorage{
     function store (uint256 _favNumber) public{
         favNumber = _favNumber;
     }
+    
+    // view does not have any state change and therfore no transactions
+    
+    function retrieve() public view returns(uint256){
+        
+        return favNumber;
+        
+    }
+    
+    
 }
