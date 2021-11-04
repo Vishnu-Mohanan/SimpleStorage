@@ -11,12 +11,11 @@ contract SimpleStorage{
         favNumber = _favNumber;
     }
     
-    // view does not have any state change and therfore no transactions
+    // pure does not have any state change and therfore no transactions, used for simple maths
     
-    function retrieve() public view returns(uint256){
+    function retrieve(uint256 favNumber) public pure {
         
-        return favNumber;
-        
+       favNumber * 10/100;
     }
     
     
