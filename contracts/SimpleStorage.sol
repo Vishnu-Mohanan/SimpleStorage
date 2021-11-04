@@ -15,7 +15,13 @@ contract SimpleStorage{
     
     function retrieve(uint256 favNumber) public pure {
         
-       favNumber * 10/100;
+      favNumber + favNumber;
+    }
+ 
+    // view doesnt store any value but only returns it and no transactions 
+    
+    function retrieve2() public view returns(uint256){
+        return favNumber + 2;   
     }
     
     
