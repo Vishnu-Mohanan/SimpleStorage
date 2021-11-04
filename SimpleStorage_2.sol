@@ -12,7 +12,7 @@ contract SimpleStorage{
         string name;
     }
     
-    People public person = People({favNumber: 49, name: "Vishnu" });
+    People[] public person; 
     
     
     function store (uint256 _favNumber) public{
@@ -22,8 +22,16 @@ contract SimpleStorage{
     // view doesnt store any value but only returns it and no transactions 
     
     function retrieve2() public view returns(uint256){
-        return favNumber + 2;   
+        return favNumber + 2; 
+        
     }
+    
+    function addPerson(string memory _name, uint256 _favNumber) public{
+        
+        person.push(People(_favNumber, _name));
+    }    
+    
+    
     
     
 }
